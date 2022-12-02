@@ -6,6 +6,4 @@ public class FEventGroup
 {
     public List<FEventAction> Actions = new List<FEventAction>();
     public List<FEventCondition> Conditions = new List<FEventCondition>();
-    
-
 }

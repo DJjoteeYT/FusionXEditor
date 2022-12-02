@@ -1,7 +1,7 @@
 ﻿FusionX Editor
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\
@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 C:\Users\lily\Desktop\CTF\FusionX Editor\App.xaml
-5-118640349
+102065498903
 
-9-2092979301
+19-843088002
 198-1736014856
-EventEditor.xaml;FrameEditor.xaml;MainWindow.xaml;TestWindow.xaml;Welcome.xaml;
+CustomControls\ActionControl.xaml;CustomControls\ConditionControl.xaml;CustomControls\EventEditorHeader.xaml;CustomControls\EventGroupControl.xaml;CustomControls\EventObjectControl.xaml;EventEditor.xaml;FrameEditor.xaml;MainWindow.xaml;TestWindow.xaml;Welcome.xaml;
 
 False
 

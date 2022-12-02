@@ -6,8 +6,8 @@ namespace FusionX_Editor.Editor.EventEditor;
 
 public class FEventEditor
 {
-    public List<FEventObject> Objects = new List<FEventObject>();
-    public List<FEventGroup> Events = new List<FEventGroup>();
+    public List<FEventObject> Objects = new();
+    public List<FEventGroup> Events = new();
     
     private static Random random = new Random();
 

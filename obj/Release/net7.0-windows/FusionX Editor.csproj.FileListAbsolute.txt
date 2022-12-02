@@ -27,3 +27,14 @@ C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\FusionX Edit
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\ref\FusionX Editor.dll
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\TestWindow.g.cs
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\TestWindow.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\ActionControl.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\ConditionControl.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\EventEditorHeader.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\EventGroupControl.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\EventObjectControl.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\ActionControl.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\ConditionControl.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\EventEditorHeader.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\EventGroupControl.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Release\net7.0-windows\CustomControls\EventObjectControl.baml

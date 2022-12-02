@@ -1,0 +1,20 @@
+﻿FusionX Editor
+
+
+exe
+C#
+.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\
+FusionX_Editor
+none
+false
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+D:\Repos\FusionXEditor\App.xaml
+102065498903
+
+17534905608
+198-1736014856
+CustomControls\ActionControl.xaml;CustomControls\ConditionControl.xaml;CustomControls\EventEditorHeader.xaml;CustomControls\EventGroupControl.xaml;CustomControls\EventObjectControl.xaml;EventEditor.xaml;FrameEditor.xaml;MainWindow.xaml;TestWindow.xaml;Welcome.xaml;
+
+False
+
