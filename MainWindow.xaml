@@ -47,13 +47,47 @@
                 <MenuItem Header="_Tools">
                     <MenuItem x:Name="ToolsPreferences" Header="Preferences" HorizontalAlignment="Left" Width="210"/>
                 </MenuItem>
-                <MenuItem Header="_Help">
+            <MenuItem Header="_Help">
                     <MenuItem x:Name="Help_Examples" Header="Examples" HorizontalAlignment="Left" Width="185"/>
                     <MenuItem x:Name="Help_Contents" Header="Contents" HorizontalAlignment="Left" Width="185"/>
                     <Separator/>
                     <MenuItem x:Name="Help_About" Header="About..." HorizontalAlignment="Left" Width="185"/>
                 </MenuItem>
             </Menu>
+        
+        <Menu DockPanel.Dock="Top">
+            
+            <MenuItem Name="MenuNewFile" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarNew.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuOpenFile" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarOpen.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuSaveFile" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarSave.png" /></MenuItem.Header></MenuItem>
+
+            <MenuItem Name="MenuCut" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarCut.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuCopy" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarCopy.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuPaste" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarPaste.png" /></MenuItem.Header></MenuItem>
+            
+            <MenuItem Name="MenuUndo" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarUndo.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuRedo" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarRedo.png" /></MenuItem.Header></MenuItem>
+            
+            <MenuItem Name="MenuHelp" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarHelp.png" /></MenuItem.Header></MenuItem>
+            
+            <MenuItem Name="MenuBack" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarBack.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuForward" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarForward.png" /></MenuItem.Header></MenuItem>
+            
+            <MenuItem Name="MenuStoryboard" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarStoryboard.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuFrame" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarFrame.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuEvents" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEvents.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuEventList" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEventList.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuMedia" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEventList.png" /></MenuItem.Header></MenuItem>
+            
+            <ComboBox Width="146" Margin="-6,0,-6,0">
+                <ComboBoxItem Content="1 - Frame 1" IsSelected="True"></ComboBoxItem>
+            </ComboBox>  
+            
+            <MenuItem Name="MenuPrevFrame" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarPrevFrame.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuNextFrame" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarNextFrame.png" /></MenuItem.Header></MenuItem>
+            
+
+        </Menu>
             
             
             <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" DockPanel.Dock="Left">

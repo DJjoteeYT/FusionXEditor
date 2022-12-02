@@ -9,7 +9,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resources" />
+    <None Remove="Resources\ICON134_1.ico" />
+    <None Remove="Resources\toolbarBack.png" />
+    <Resource Include="Resources\toolbarBack.png" />
+    <None Remove="Resources\toolbarEventList.png" />
+    <Resource Include="Resources\toolbarEventList.png" />
+    <None Remove="Resources\toolbarEvents.png" />
+    <Resource Include="Resources\toolbarEvents.png" />
+    <None Remove="Resources\toolbarForward.png" />
+    <Resource Include="Resources\toolbarForward.png" />
+    <None Remove="Resources\toolbarFrame.png" />
+    <Resource Include="Resources\toolbarFrame.png" />
+    <None Remove="Resources\toolbarMedia.png" />
+    <Resource Include="Resources\toolbarMedia.png" />
+    <None Remove="Resources\toolbarNextFrame.png" />
+    <Resource Include="Resources\toolbarNextFrame.png" />
+    <None Remove="Resources\toolbarPrevFrame.png" />
+    <Resource Include="Resources\toolbarPrevFrame.png" />
+    <None Remove="Resources\toolbarStoryboard.png" />
+    <Resource Include="Resources\toolbarStoryboard.png" />
+    <None Remove="Resources\toolbarCopy.png" />
+    <Resource Include="Resources\toolbarCopy.png" />
+    <None Remove="Resources\toolbarCut.png" />
+    <Resource Include="Resources\toolbarCut.png" />
+    <None Remove="Resources\toolbarHelp.png" />
+    <Resource Include="Resources\toolbarHelp.png" />
+    <None Remove="Resources\toolbarNew.png" />
+    <Resource Include="Resources\toolbarNew.png" />
+    <None Remove="Resources\toolbarOpen.png" />
+    <Resource Include="Resources\toolbarOpen.png" />
+    <None Remove="Resources\toolbarPaste.png" />
+    <Resource Include="Resources\toolbarPaste.png" />
+    <None Remove="Resources\toolbarRedo.png" />
+    <Resource Include="Resources\toolbarRedo.png" />
+    <None Remove="Resources\toolbarSave.png" />
+    <Resource Include="Resources\toolbarSave.png" />
+    <None Remove="Resources\toolbarUndo.png" />
+    <Resource Include="Resources\toolbarUndo.png" />
   </ItemGroup>
 
 </Project>
