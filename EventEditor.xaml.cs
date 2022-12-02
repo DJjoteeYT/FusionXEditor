@@ -32,6 +32,8 @@ namespace FusionX_Editor
 
         public void Redraw()
         {
+            
+            
             EventGroups.Children.Clear();
             Header.EventObjectsPanel.Children.Clear();
             
@@ -40,18 +42,38 @@ namespace FusionX_Editor
                 var newObjectControl = new EventObjectControl();
                 Header.EventObjectsPanel.Children.Add(newObjectControl);
             }
-            
-            foreach (var eventGroup in Editor.Events)
+
+            for (int i = 0; i < Editor.Events.Count; i++)
             {
+                var eventGroup = Editor.Events[i];
                 var newGroupControl = new EventGroupControl();
+                newGroupControl.EvGroupNum.Text = (i + 1).ToString();
+                foreach (var condition in eventGroup.Conditions)
+                {
+                    var newConditionControl = new ConditionControl();
+                    newConditionControl.CondText.Text = condition.Text;
+                    newGroupControl.Conditions.Children.Add(newConditionControl);
+                }
                 foreach (var eventObject in Editor.Objects)
                 {
                     var newActionControl = new ActionControl();
+                    if(eventGroup.Actions.Count>0)
+                        newActionControl.Checkmark.Visibility = Visibility.Visible;
+
                     newGroupControl.ActionPanel.Children.Add(newActionControl);
                 }
 
+                
                 EventGroups.Children.Add(newGroupControl);
             }
+
+            var createEventGroup = new EventGroupControl();
+            createEventGroup.EvGroupNum.Text=(Editor.Events.Count+1).ToString();
+            var newCondition = new ConditionControl();
+            newCondition.CondText.Text = "New condition";
+            createEventGroup.Conditions.Children.Add(newCondition);
+            EventGroups.Children.Add(createEventGroup);
+            EventGroups.Children.Add(new Separator() { Background = Brushes.Transparent, Height = 200});
         }
     }
 }

@@ -8,7 +8,7 @@
              d:DesignHeight="29" d:DesignWidth="29">
     <Border BorderBrush="#a0a0a0" BorderThickness="0,0,1,1" Width="29" Height="30">
         
-        <Button Background="Transparent" BorderThickness="0">
+        <Button Background="White" BorderThickness="0">
             <Button.Content>
                 <Image Source="../Resources/systemObject.png"></Image>
             </Button.Content>

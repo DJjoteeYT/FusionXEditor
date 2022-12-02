@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FusionX_Editor.CustomControls"
              mc:Ignorable="d"
              d:DesignHeight="30" d:DesignWidth="1000">
-    <StackPanel Orientation="Horizontal">
+    <StackPanel Orientation="Horizontal" Background="White">
         <Border BorderBrush="#a0a0a0" BorderThickness="1" Height="30" Width="300" HorizontalAlignment="Left">
             <StackPanel>
                 <TextBlock Width="300" Text="All the events" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,0,0,-3"></TextBlock>

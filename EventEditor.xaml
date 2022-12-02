@@ -10,16 +10,21 @@
       Title="Event Editor">
 
     <Grid>
-        <StackPanel>
-            <customControls:EventEditorHeader x:Name="Header"></customControls:EventEditorHeader>
+        <customControls:EventEditorHeader x:Name="Header" DockPanel.Dock="Top" VerticalAlignment="Top"></customControls:EventEditorHeader>
+        
+        <ScrollViewer>
+            
+            <StackPanel>
+                    
+                    <Separator Background="Transparent" Height="26"></Separator>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Name="EventGroups">
+                            <customControls:EventGroupControl></customControls:EventGroupControl>
 
-            <StackPanel Orientation="Horizontal">
-                <StackPanel Name="EventGroups">
-                    <customControls:EventGroupControl></customControls:EventGroupControl>
+                        </StackPanel>
+
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-        </StackPanel>
-        
-        
+            </ScrollViewer> 
     </Grid>
 </Page>

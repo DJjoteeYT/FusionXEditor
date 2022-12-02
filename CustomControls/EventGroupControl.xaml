@@ -5,9 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:FusionX_Editor.CustomControls"
              mc:Ignorable="d"
-             d:DesignHeight="25" d:DesignWidth="1000">
-    <StackPanel Orientation="Horizontal" Height="25">
-        <local:ConditionControl></local:ConditionControl>
+             d:DesignHeight="50" d:DesignWidth="1000">
+    <StackPanel Orientation="Horizontal" MinHeight="25">
+        <Grid MinHeight="25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"></ColumnDefinition>
+                <ColumnDefinition Width="272"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        
+            <Border Grid.Column="0" BorderBrush="#a0a0a0" BorderThickness="1,0,1,1">
+                <TextBlock Name="EvGroupNum" Text="1" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            </Border>
+            <Border Grid.Column="1" BorderBrush="#a0a0a0" BorderThickness="0,0,1,1">
+            <StackPanel Name="Conditions">
+                
+            </StackPanel>
+            </Border>
+        </Grid>   
+        
         <StackPanel Name="ActionPanel" Orientation="Horizontal"></StackPanel>
     </StackPanel>
 </UserControl>

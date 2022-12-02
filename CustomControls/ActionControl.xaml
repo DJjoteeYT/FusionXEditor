@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              d:DesignHeight="25" d:DesignWidth="29">
     
-    <Border BorderBrush="#a0a0a0" BorderThickness="0,0,1,1" Width="29" Height="25">
+    <Border BorderBrush="#a0a0a0" BorderThickness="0,0,1,1" Width="29" MinHeight="25">
         
         <Button Background="Transparent" BorderThickness="0">
             <Button.Content>
