@@ -9,8 +9,12 @@
       Title="Event Editor">
 
     <Grid>
-        <Label x:Name="EventsShownLabel" Content="All the events" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="305" Background="White" BorderBrush="Black">
-        </Label>
-        <StackPanel x:Name="Event" Margin="0,32,0,388"/>
+        <TextBlock x:Name="Bg" HorizontalAlignment="Center" TextWrapping="Wrap" Background="Gray" Text="Event Editor" VerticalAlignment="Center" Height="450" Width="800"/>
+        <Label x:Name="EventsShownLabel" Content="All the events" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="305" Background="White" BorderBrush="Black"/>
+        <WrapPanel Margin="0,33,0,392" Grid.ColumnSpan="2">
+            <Label x:Name="LineNumber" Content="1" HorizontalAlignment="Left" Height="24" Width="22" Background="White" BorderBrush="Black"/>
+            <Label x:Name="Block" Content="ERROR" HorizontalAlignment="Left" Height="24" Width="283" Background="White" BorderBrush="Black"/>
+            <Grid Width="495" HorizontalAlignment="Center" ShowGridLines="True" Background="White"/>
+        </WrapPanel>
     </Grid>
 </Page>
