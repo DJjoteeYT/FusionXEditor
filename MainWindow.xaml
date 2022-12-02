@@ -38,10 +38,10 @@
                     <MenuItem x:Name="RunAppFromCurFrame" Header="Application from current frame" HorizontalAlignment="Left" Width="280"/>
                     <MenuItem x:Name="RunAppFrame" Header="Frame" HorizontalAlignment="Left" Width="280"/>
                 </MenuItem>
-                <MenuItem Header="Tools">
+                <MenuItem Header="_Tools">
                     <MenuItem x:Name="ToolsPreferences" Header="Preferences" HorizontalAlignment="Left" Width="210"/>
                 </MenuItem>
-                <MenuItem Header="Help">
+                <MenuItem Header="_Help">
                     <MenuItem x:Name="Help_Examples" Header="Examples" HorizontalAlignment="Left" Width="185"/>
                     <MenuItem x:Name="Help_Contents" Header="Contents" HorizontalAlignment="Left" Width="185"/>
                     <Separator/>
