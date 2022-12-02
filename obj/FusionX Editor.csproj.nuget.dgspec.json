@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj": {}
+    "D:\\Repos\\FusionXEditor\\FusionX Editor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj": {
+    "D:\\Repos\\FusionXEditor\\FusionX Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj",
+        "projectUniqueName": "D:\\Repos\\FusionXEditor\\FusionX Editor.csproj",
         "projectName": "FusionX Editor",
-        "projectPath": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj",
-        "packagesPath": "C:\\Users\\lily\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\obj\\",
+        "projectPath": "D:\\Repos\\FusionXEditor\\FusionX Editor.csproj",
+        "packagesPath": "C:\\Users\\1987kostya\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\FusionXEditor\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lily\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\1987kostya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"

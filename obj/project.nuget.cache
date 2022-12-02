@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "znegcM/WxK7ulNateUo68V+61RswtVs+TxjCMkcbKTpP5SFvQaDYS6wy2LxKwdpTqptbeYKI8DJN5/B0qiWe9A==",
+  "dgSpecHash": "dCnZSn7j2bX4L2aVgiBzBEl7RcZz/dChkRzN5IplFb4Y/lrBxfGi75Kwfnrst2IW6UZCq94nTX2S1Ft/itibkQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj",
+  "projectFilePath": "D:\\Repos\\FusionXEditor\\FusionX Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

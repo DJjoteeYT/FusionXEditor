@@ -54,3 +54,14 @@ D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.genruntimeconfig.
 D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\ref\FusionX Editor.dll
 D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\TestWindow.g.cs
 D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\TestWindow.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\ConditionControl.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\ConditionControl.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\ActionControl.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\EventGroupControl.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\ActionControl.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\EventGroupControl.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\EventEditorHeader.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\EventObjectControl.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\EventEditorHeader.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\CustomControls\EventObjectControl.baml

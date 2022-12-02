@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="FusionX_Editor.CustomControls.EventEditorHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:FusionX_Editor.CustomControls"
+             mc:Ignorable="d"
+             d:DesignHeight="30" d:DesignWidth="1000">
+    <StackPanel Orientation="Horizontal">
+        <Border BorderBrush="#a0a0a0" BorderThickness="1" Height="30" Width="300" HorizontalAlignment="Left">
+            <StackPanel>
+                <TextBlock Width="300" Text="All the events" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,0,0,-3"></TextBlock>
+                <TextBlock Width="300" Text="All the objects" HorizontalAlignment="Left" TextAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <StackPanel Name="EventObjectsPanel" Orientation="Horizontal">
+            
+        </StackPanel>
+        
+    </StackPanel>
+</UserControl>

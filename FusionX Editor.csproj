@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <RootNamespace>FusionX_Editor</RootNamespace>
     <Nullable>enable</Nullable>
@@ -46,6 +46,13 @@
     <Resource Include="Resources\toolbarSave.png" />
     <None Remove="Resources\toolbarUndo.png" />
     <Resource Include="Resources\toolbarUndo.png" />
+    <None Remove="Resources\conditionDot.png" />
+    <None Remove="Resources\systemObject.png" />
+    <Resource Include="Resources\systemObject.png" />
+    <None Remove="Resources\EE_Blob.png" />
+    <Resource Include="Resources\EE_Blob.png" />
+    <None Remove="Resources\EE_Checkmark.png" />
+    <Resource Include="Resources\EE_Checkmark.png" />
   </ItemGroup>
 
 </Project>

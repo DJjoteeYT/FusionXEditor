@@ -74,8 +74,8 @@
             <MenuItem Name="MenuForward" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarForward.png" /></MenuItem.Header></MenuItem>
             
             <MenuItem Name="MenuStoryboard" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarStoryboard.png" /></MenuItem.Header></MenuItem>
-            <MenuItem Name="MenuFrame" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarFrame.png" /></MenuItem.Header></MenuItem>
-            <MenuItem Name="MenuEvents" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEvents.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuFrame" Click="FrameEditor_Click"><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarFrame.png" /></MenuItem.Header></MenuItem>
+            <MenuItem Name="MenuEvents" Click="EventEditor_Click"><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEvents.png" /></MenuItem.Header></MenuItem>
             <MenuItem Name="MenuEventList" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEventList.png" /></MenuItem.Header></MenuItem>
             <MenuItem Name="MenuMedia" ><MenuItem.Header><Image Width="16" Height="16" Source="Resources/toolbarEventList.png" /></MenuItem.Header></MenuItem>
             

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FusionX_Editor.CustomControls;
+using FusionX_Editor.Editor.EventEditor;
 
 namespace FusionX_Editor
 {
@@ -20,9 +22,36 @@ namespace FusionX_Editor
     /// </summary>
     public partial class EventEditor : Page
     {
+        public FEventEditor Editor;
         public EventEditor()
         {
             InitializeComponent();
+            Editor = new FEventEditor();
+            Editor.Init();
+            Redraw();
+        }
+
+        public void Redraw()
+        {
+            EventGroups.Children.Clear();
+            Header.EventObjectsPanel.Children.Clear();
+            foreach (var eventObject in Editor.Objects)
+            {
+                var newObjectControl = new EventObjectControl();
+                Header.EventObjectsPanel.Children.Add(newObjectControl);
+            }
+
+            foreach (var eventGroup in Editor.Events)
+            {
+                var newGroupControl = new EventGroupControl();
+                foreach (var eventObject in Editor.Objects)
+                {
+                    var newActionControl = new ActionControl();
+                    newGroupControl.ActionPanel.Children.Add(newActionControl);
+                }
+
+                EventGroups.Children.Add(newGroupControl);
+            }
         }
     }
 }
