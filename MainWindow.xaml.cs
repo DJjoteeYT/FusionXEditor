@@ -54,6 +54,7 @@ namespace FusionX_Editor
         {
             InitializeComponent();
             Editor.Source = new Uri("Welcome.xaml", UriKind.RelativeOrAbsolute);
+            EventEditor.Editor.Init();
         }
 
         #region Menubar
@@ -67,15 +68,17 @@ namespace FusionX_Editor
         #region View
         private void WelcomePage_Click(object sender, RoutedEventArgs e)
         {
-            Editor.Source = new Uri("Welcome.xaml", UriKind.RelativeOrAbsolute);
+            Editor.Content = Welcome;
         }
         private void FrameEditor_Click(object sender, RoutedEventArgs e)
         {
-            Editor.Source = new Uri("FrameEditor.xaml", UriKind.RelativeOrAbsolute);
+            Editor.Content = FrameEditor;
         }
         private void EventEditor_Click(object sender, RoutedEventArgs e)
         {
-            Editor.Source = new Uri("EventEditor.xaml", UriKind.RelativeOrAbsolute);
+            Editor.Content = EventEditor;
+            EventEditor.Redraw();
+
         }
         #endregion
         #endregion

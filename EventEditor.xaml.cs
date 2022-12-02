@@ -28,19 +28,19 @@ namespace FusionX_Editor
             InitializeComponent();
             Editor = new FEventEditor();
             Editor.Init();
-            Redraw();
         }
 
         public void Redraw()
         {
             EventGroups.Children.Clear();
             Header.EventObjectsPanel.Children.Clear();
+            
             foreach (var eventObject in Editor.Objects)
             {
                 var newObjectControl = new EventObjectControl();
                 Header.EventObjectsPanel.Children.Add(newObjectControl);
             }
-
+            
             foreach (var eventGroup in Editor.Events)
             {
                 var newGroupControl = new EventGroupControl();
