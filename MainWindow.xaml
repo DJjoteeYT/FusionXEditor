@@ -1,12 +1,53 @@
-﻿<Window x:Class="FusionX_Editor.MainWindow"
+﻿<Window x:Name="FusionX" x:Class="FusionX_Editor.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FusionX_Editor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="FusionX" Height="500" Width="955">
+    <Grid Height="500" VerticalAlignment="Top">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Width="955" Margin="0,0,-15,0">
+            <Menu Width="955" Height="20">
+                <MenuItem Header="_File">
+                    <MenuItem x:Name="New" Header="New" HorizontalAlignment="Left" Width="425"/>
+                    <MenuItem x:Name="Open" Header="Open" HorizontalAlignment="Left" Width="425"/>
+                    <MenuItem x:Name="Close" Header="Close" HorizontalAlignment="Left" Width="425"/>
+                    <MenuItem x:Name="Save" Header="Save" HorizontalAlignment="Left" Width="425"/>
+                    <MenuItem x:Name="SaveAs" Header="Save As..." HorizontalAlignment="Left" Width="425"/>
+                    <MenuItem x:Name="ProjectTools" Header="Project" HorizontalAlignment="Left" Width="425">
+                        <MenuItem x:Name="NewProject" Header="New Project" HorizontalAlignment="Left" Width="150"/>
+                        <MenuItem x:Name="OpenProject" Header="Open Project" HorizontalAlignment="Left" Width="150"/>
+                        <MenuItem x:Name="CloseProject" Header="Close Project" HorizontalAlignment="Left" Width="150"/>
+                        <MenuItem x:Name="SaveProject" Header="Save Project" HorizontalAlignment="Left" Width="150"/>
+                        <MenuItem x:Name="SaveProjectAs" Header="Save Project As" HorizontalAlignment="Left" Width="150"/>
+                    </MenuItem>
+                    <MenuItem x:Name="Build" Header="Build" HorizontalAlignment="Left" Width="425"/>
+                </MenuItem>
+                <MenuItem Header="_View">
+                    <MenuItem x:Name="Toolbars" Header="_Options" HorizontalAlignment="Left" Width="250">
+                        <MenuItem x:Name="Skineditor" Header="Skin editor" HorizontalAlignment="Left" Width="250"/>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem x:Name="ExtManager" Header="Extension Manager" HorizontalAlignment="Left" Width="250"/>
+                </MenuItem>
+                <MenuItem Header="_Run">
+                    <MenuItem x:Name="RunProject" Header="Project" HorizontalAlignment="Left" Width="280"/>
+                    <MenuItem x:Name="RunApp" Header="Application" HorizontalAlignment="Left" Width="280"/>
+                    <Separator/>
+                    <MenuItem x:Name="RunAppFromCurFrame" Header="Application from current frame" HorizontalAlignment="Left" Width="280"/>
+                    <MenuItem x:Name="RunAppFrame" Header="Frame" HorizontalAlignment="Left" Width="280"/>
+                </MenuItem>
+                <MenuItem Header="Tools">
+                    <MenuItem x:Name="ToolsPreferences" Header="Preferences" HorizontalAlignment="Left" Width="210"/>
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem x:Name="Help_Examples" Header="Examples" HorizontalAlignment="Left" Width="185"/>
+                    <MenuItem x:Name="Help_Contents" Header="Contents" HorizontalAlignment="Left" Width="185"/>
+                    <Separator/>
+                    <MenuItem x:Name="Help_About" Header="About..." HorizontalAlignment="Left" Width="185"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
