@@ -8,8 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Welcome">
 
-    <Grid>
-        <Button x:Name="Button1" Content="Creative button in the welcome page. i'm bored." HorizontalAlignment="Left" Margin="119,77,0,0" VerticalAlignment="Top"/>
+    <Grid Background="Blue">
+        <TextBlock Text="ass"></TextBlock>
 
     </Grid>
 </Page>

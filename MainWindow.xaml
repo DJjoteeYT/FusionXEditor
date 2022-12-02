@@ -6,9 +6,8 @@
         xmlns:local="clr-namespace:FusionX_Editor"
         mc:Ignorable="d"
         Title="FusionX" Height="500" Width="955">
-    <Grid Height="500" VerticalAlignment="Top">
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Width="955" Margin="0,0,-15,0" Height="500">
-            <Menu Width="955" Height="20">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
                     <MenuItem x:Name="New" Header="New" HorizontalAlignment="Left" Width="425" Click="NewFile_Click"/>
                     <MenuItem x:Name="Open" Header="Open" HorizontalAlignment="Left" Width="425"/>
@@ -55,10 +54,40 @@
                     <MenuItem x:Name="Help_About" Header="About..." HorizontalAlignment="Left" Width="185"/>
                 </MenuItem>
             </Menu>
-        </StackPanel>
-        <ToolBar x:Name="Workspace_Toolbar" Background="White" Width="194" Margin="0,55,761,230">
-            <TreeView x:Name="WorkspaceToolbar_Tree" Width="152"></TreeView>
-        </ToolBar>
-        <Frame x:Name="Editor" Content="Frame" Margin="194,55,0,10" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-    </Grid>
+            
+            
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" DockPanel.Dock="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel >
+                    <TreeView>
+                        <TreeViewItem Header="Application 1">
+                            <TreeViewItem Header="Frame 1"/>
+                        </TreeViewItem>
+                    </TreeView>
+                </StackPanel>
+                
+                <StackPanel Grid.Row="1">
+                    <ListView>
+                        <TextBlock Text="Test"></TextBlock>
+                        <TextBlock Text="Test"></TextBlock>
+                        <TextBlock Text="Test"></TextBlock>
+                        <TextBlock Text="Test"></TextBlock>
+                    </ListView>
+                </StackPanel>
+
+                
+
+                <Frame Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  x:Name="Editor" Content="Frame" ScrollViewer.VerticalScrollBarVisibility="Disabled" NavigationUIVisibility="Hidden"/>
+                <GridSplitter Grid.ColumnSpan="1" Grid.Row="1" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Top"></GridSplitter>
+                <GridSplitter Grid.RowSpan="2" Width="3"></GridSplitter>
+            </Grid>
+    </DockPanel>
 </Window>

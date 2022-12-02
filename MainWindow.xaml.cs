@@ -84,7 +84,6 @@ namespace FusionX_Editor
         {
             TreeViewItem app = new TreeViewItem();
             app.Name = name.Trim(' ');
-            WorkspaceToolbar_Tree.Items.Add(app);
             //WorkspaceToolbar_Tree.
         }
         private void NewFrame(string appName)

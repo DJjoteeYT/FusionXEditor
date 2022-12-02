@@ -25,3 +25,32 @@ C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\Welcome.g.cs
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\EventEditor.baml
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\FrameEditor.baml
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\Welcome.baml
+D:\Repos\FusionXEditor\bin\Debug\net7.0-windows\FusionX Editor.exe
+D:\Repos\FusionXEditor\bin\Debug\net7.0-windows\FusionX Editor.deps.json
+D:\Repos\FusionXEditor\bin\Debug\net7.0-windows\FusionX Editor.runtimeconfig.json
+D:\Repos\FusionXEditor\bin\Debug\net7.0-windows\FusionX Editor.dll
+D:\Repos\FusionXEditor\bin\Debug\net7.0-windows\FusionX Editor.pdb
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.csproj.AssemblyReference.cache
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\EventEditor.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FrameEditor.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\Welcome.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\App.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor_MarkupCompile.cache
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor_MarkupCompile.lref
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\EventEditor.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FrameEditor.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\MainWindow.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\Welcome.baml
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.g.resources
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.AssemblyInfoInputs.cache
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.AssemblyInfo.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.csproj.CoreCompileInputs.cache
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.dll
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\refint\FusionX Editor.dll
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.pdb
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\FusionX Editor.genruntimeconfig.cache
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\ref\FusionX Editor.dll
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\TestWindow.g.cs
+D:\Repos\FusionXEditor\obj\Debug\net7.0-windows\TestWindow.baml

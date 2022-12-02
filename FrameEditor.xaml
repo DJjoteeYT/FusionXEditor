@@ -9,6 +9,7 @@
       Title="Frame Editor">
 
     <Grid>
-        
+        <Label x:Name="EventsShownLabel" Content="Frame editor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="305" Background="White" BorderBrush="Black"/>
+
     </Grid>
 </Page>
