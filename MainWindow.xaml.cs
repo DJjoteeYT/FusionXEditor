@@ -20,9 +20,76 @@ namespace FusionX_Editor
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Welcome WelcomePage = new();
+        public FrameEditor FrameEditor = new();
+        public EventEditor EventEditor = new();
+
+        private int NewAppCount = 0;
+
+        public bool AnyApplicationOpen;
+        private bool ApplicationIsOpen
+        {
+            get
+            {
+                return false; //i dunno
+            }
+            set
+            {
+                AnyApplicationOpen = value;
+
+                Close.IsEnabled = value;
+                Save.IsEnabled = value;
+                SaveAs.IsEnabled = value;
+                ProjectTools.IsEnabled = value;
+                Build.IsEnabled = value;
+
+                RunProject.IsEnabled = value;
+                RunApp.IsEnabled = value;
+                RunAppFromCurFrame.IsEnabled = value;
+                RunAppFrame.IsEnabled = value;
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
+            Editor.Source = new Uri("Welcome.xaml", UriKind.RelativeOrAbsolute);
+        }
+
+        #region Menubar
+        #region File
+        private void NewFile_Click(object sender, RoutedEventArgs e)
+        {
+            NewAppCount++;
+            NewApplication("Application " + NewAppCount);
+        }
+        #endregion
+        #region View
+        private void WelcomePage_Click(object sender, RoutedEventArgs e)
+        {
+            Editor.Source = new Uri("Welcome.xaml", UriKind.RelativeOrAbsolute);
+        }
+        private void FrameEditor_Click(object sender, RoutedEventArgs e)
+        {
+            Editor.Source = new Uri("FrameEditor.xaml", UriKind.RelativeOrAbsolute);
+        }
+        private void EventEditor_Click(object sender, RoutedEventArgs e)
+        {
+            Editor.Source = new Uri("EventEditor.xaml", UriKind.RelativeOrAbsolute);
+        }
+        #endregion
+        #endregion
+
+        private void NewApplication(string name)
+        {
+            TreeViewItem app = new TreeViewItem();
+            app.Name = name.Trim(' ');
+            WorkspaceToolbar_Tree.Items.Add(app);
+            //WorkspaceToolbar_Tree.
+        }
+        private void NewFrame(string appName)
+        {
+
         }
     }
 }

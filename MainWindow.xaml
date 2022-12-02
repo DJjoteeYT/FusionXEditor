@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="FusionX" Height="500" Width="955">
     <Grid Height="500" VerticalAlignment="Top">
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Width="955" Margin="0,0,-15,0">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Width="955" Margin="0,0,-15,0" Height="500">
             <Menu Width="955" Height="20">
                 <MenuItem Header="_File">
-                    <MenuItem x:Name="New" Header="New" HorizontalAlignment="Left" Width="425"/>
+                    <MenuItem x:Name="New" Header="New" HorizontalAlignment="Left" Width="425" Click="NewFile_Click"/>
                     <MenuItem x:Name="Open" Header="Open" HorizontalAlignment="Left" Width="425"/>
                     <MenuItem x:Name="Close" Header="Close" HorizontalAlignment="Left" Width="425"/>
                     <MenuItem x:Name="Save" Header="Save" HorizontalAlignment="Left" Width="425"/>
@@ -29,6 +29,13 @@
                         <MenuItem x:Name="Skineditor" Header="Skin editor" HorizontalAlignment="Left" Width="250"/>
                     </MenuItem>
                     <Separator/>
+                    <MenuItem x:Name="Welcome" Header="Welcome Page" HorizontalAlignment="Left" Width="250" Click="WelcomePage_Click"/>
+                    <MenuItem x:Name="StoryBoard" Header="Storyboard Editor" HorizontalAlignment="Left" Width="250"/>
+                    <MenuItem x:Name="FrameEditorItem" Header="Frame Editor" HorizontalAlignment="Left" Width="250" Click="FrameEditor_Click"/>
+                    <MenuItem x:Name="EventEditorItem" Header="Event Editor" HorizontalAlignment="Left" Width="250" Click="EventEditor_Click"/>
+                    <MenuItem x:Name="EventListEditor" Header="Event List Editor" HorizontalAlignment="Left" Width="250"/>
+                    <MenuItem x:Name="GlobalEventEditor" Header="Global Event Editor" HorizontalAlignment="Left" Width="250"/>
+                    <MenuItem x:Name="DataElements" Header="Data Elements" HorizontalAlignment="Left" Width="250"/>
                     <MenuItem x:Name="ExtManager" Header="Extension Manager" HorizontalAlignment="Left" Width="250"/>
                 </MenuItem>
                 <MenuItem Header="_Run">
@@ -49,5 +56,9 @@
                 </MenuItem>
             </Menu>
         </StackPanel>
+        <ToolBar x:Name="Workspace_Toolbar" Background="White" Width="194" Margin="0,55,761,230">
+            <TreeView x:Name="WorkspaceToolbar_Tree" Width="152"></TreeView>
+        </ToolBar>
+        <Frame x:Name="Editor" Content="Frame" Margin="194,55,0,10" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
     </Grid>
 </Window>

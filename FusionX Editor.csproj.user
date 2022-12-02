@@ -7,7 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="EventEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrameEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Welcome.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="EventEditor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrameEditor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Welcome.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

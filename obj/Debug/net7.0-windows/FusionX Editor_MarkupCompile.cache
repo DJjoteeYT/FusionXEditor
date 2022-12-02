@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\lily\Desktop\CTF\FusionX Editor\App.xaml
-11407045341
+4-1954754661
 
-3-1233169557
+6-1045835378
 198-1736014856
-MainWindow.xaml;
+EventEditor.xaml;FrameEditor.xaml;MainWindow.xaml;Welcome.xaml;
 
 False
 

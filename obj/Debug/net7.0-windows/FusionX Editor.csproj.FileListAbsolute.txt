@@ -19,3 +19,9 @@ C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\refint\FusionX
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\FusionX Editor.pdb
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\FusionX Editor.genruntimeconfig.cache
 C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\ref\FusionX Editor.dll
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\EventEditor.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\FrameEditor.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\Welcome.g.cs
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\EventEditor.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\FrameEditor.baml
+C:\Users\lily\Desktop\CTF\FusionX Editor\obj\Debug\net7.0-windows\Welcome.baml
