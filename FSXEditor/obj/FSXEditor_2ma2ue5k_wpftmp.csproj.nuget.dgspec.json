@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\FusionXEditor\\FSXEditor\\FSXEditor.csproj": {}
+    "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\FusionXEditor\\FSXEditor\\FSXEditor.csproj": {
+    "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\FusionXEditor\\FSXEditor\\FSXEditor.csproj",
-        "projectName": "TestApp",
-        "projectPath": "D:\\Repos\\FusionXEditor\\FSXEditor\\FSXEditor.csproj",
-        "packagesPath": "C:\\Users\\1987kostya\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\FusionXEditor\\FSXEditor\\obj\\",
+        "projectUniqueName": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj",
+        "projectName": "FusionX Editor",
+        "projectPath": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\FusionX Editor.csproj",
+        "packagesPath": "C:\\Users\\lily\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lily\\Desktop\\CTF\\FusionX Editor\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\1987kostya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lily\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
@@ -39,24 +45,6 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "dependencies": {
-            "Dirkster.AvalonDock": {
-              "target": "Package",
-              "version": "[4.70.3, )"
-            },
-            "Dirkster.AvalonDock.Themes.VS2013": {
-              "target": "Package",
-              "version": "[4.70.3, )"
-            },
-            "MonoGame.Framework.DesktopGL": {
-              "target": "Package",
-              "version": "[3.8.1.303, )"
-            },
-            "MonoGame.Framework.WindowsDX": {
-              "target": "Package",
-              "version": "[3.8.1.303, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -72,7 +60,7 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App": {
+            "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
             }
           },
