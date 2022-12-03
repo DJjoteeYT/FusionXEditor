@@ -26,11 +26,13 @@ using CTFAK;
 using CTFAK.MFA;
 using CTFAK.MFA.MFAObjectLoaders;
 using CTFAK.Utils;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TestApp.Editor;
 using TestApp.Editor.Rendering;
 using TestApp.MonoGameStuff;
 using MessageBox = System.Windows.MessageBox;
+using Point = System.Windows.Point;
 
 namespace TestApp
 {
@@ -42,6 +44,10 @@ namespace TestApp
 		public static FEditor Editor;
 		public FrameRendererViewModel FrameRenderer;
 		public FGame SelectedGame;
+		
+		public bool IsDraggingFrame;
+		public Point DragStart;
+		public Vector2 CameraDragStart;
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -52,9 +58,27 @@ namespace TestApp
 			Settings.isMFA = true;
 			FrameRenderer = DataContext as FrameRendererViewModel;
 			Editor = new FEditor();
-			//var newMFA = new MFAData();
-			//var mfaReader = new FileStream()
-			//newMFA.Read();
+			MonoGameControl.MouseDown += (s, e) => {
+				if (e.MiddleButton == MouseButtonState.Pressed)
+				{
+					IsDraggingFrame = true;
+					DragStart = Mouse.GetPosition(MonoGameControl);
+					CameraDragStart = FrameRenderer.Camera.Position;
+				}
+				
+			};
+			MonoGameControl.MouseUp += (s, e) => { IsDraggingFrame = false;};
+			MonoGameControl.MouseMove += (s, e) =>
+			{
+				if (IsDraggingFrame)
+				{
+					var newMouse = e.GetPosition(MonoGameControl);
+					FrameRenderer.Camera.Position = new Vector2((float)(CameraDragStart.X+(newMouse.X-DragStart.X)), (float)(CameraDragStart.Y+(newMouse.Y-DragStart.Y)));
+				}
+				
+				
+			};
+
 		}
 
 		
@@ -77,7 +101,6 @@ namespace TestApp
 			if (openFileDiaglog.FileName != null && File.Exists(openFileDiaglog.FileName))
 			{
 				SelectedGame = Editor.Load(openFileDiaglog.FileName);
-				
 			}
 			RefreshApps();
 
@@ -85,6 +108,7 @@ namespace TestApp
 
 		void RefreshApps()
 		{
+			WorkspaceTree.Items.Clear();
 			foreach (var game in Editor.LoadedGames)
 			{
 				var gameTreeItem = new TreeViewItem();
@@ -111,19 +135,29 @@ namespace TestApp
 			{
 				ShowFrame(frm);
 			}
+			
 
 		}
 
+		
+		
+		
+
 		private void OnGameDoubleClick(object sender, MouseButtonEventArgs e)
 		{
+			var item = ((TreeViewItem)sender).Tag;
+			if (item is FGame game)
+			{
+				SelectedGame = game;
+			}
 			
-
 
 		}
 
 		void ShowFrame(MFAFrame frm)
 		{
 			FrameRenderer.Renderables.Clear();
+			FrameRenderer.FrameSize = new Vector2(frm.SizeX, frm.SizeY);
 			foreach (var objInst in frm.Instances)
 			{
 				var newRenderable = new Renderable();
