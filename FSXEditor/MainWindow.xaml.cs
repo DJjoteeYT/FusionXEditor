@@ -73,10 +73,17 @@ namespace TestApp
 				if (IsDraggingFrame)
 				{
 					var newMouse = e.GetPosition(MonoGameControl);
-					FrameRenderer.Camera.Position = new Vector2((float)(CameraDragStart.X+(newMouse.X-DragStart.X)), (float)(CameraDragStart.Y+(newMouse.Y-DragStart.Y)));
+					FrameRenderer.Camera.Position = new Vector2((float)(CameraDragStart.X+(newMouse.X-DragStart.X)/FrameRenderer.Camera.Zoom), (float)(CameraDragStart.Y+(newMouse.Y-DragStart.Y)/FrameRenderer.Camera.Zoom));
 				}
 				
-				
+			};
+			MonoGameControl.MouseWheel += (s, e) =>
+			{
+				if (Keyboard.IsKeyDown(Key.LeftCtrl))
+				{
+					FrameRenderer.Camera.Zoom += Math.Sign(e.Delta)* 0.1f; //therefore we subtract, because zooming in should decrease the fov
+					FrameRenderer.Camera.Zoom = float.Clamp(FrameRenderer.Camera.Zoom, 0.1f, float.MaxValue);
+				}
 			};
 
 		}
@@ -103,6 +110,7 @@ namespace TestApp
 				SelectedGame = Editor.Load(openFileDiaglog.FileName);
 			}
 			RefreshApps();
+			ShowFrame(SelectedGame.MfaFile.Frames[0]);
 
 		}
 
@@ -156,6 +164,7 @@ namespace TestApp
 
 		void ShowFrame(MFAFrame frm)
 		{
+			frameEditorDoc.IsActive = true;
 			FrameRenderer.Renderables.Clear();
 			FrameRenderer.FrameSize = new Vector2(frm.SizeX, frm.SizeY);
 			foreach (var objInst in frm.Instances)

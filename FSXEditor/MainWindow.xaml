@@ -90,7 +90,8 @@
                             </LayoutDocument>
                             <LayoutDocument
                                 Title="Frame Editor"
-                                ContentId="frameEditorDoc">
+                                ContentId="frameEditorDoc"
+                                x:Name="frameEditorDoc">
                                 <monoGameControls:MonoGameContentControl Grid.Row="0" x:Name="MonoGameControl"/>
                             </LayoutDocument>
                             
