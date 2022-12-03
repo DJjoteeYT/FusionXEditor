@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+    <PropertyGroup>
+        <RootNamespace>TestApp</RootNamespace>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ApplicationIcon />
+        <OutputType>Exe</OutputType>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <StartupObject />
+        <AssemblyName>TestApp</AssemblyName>
+       </PropertyGroup>
+    <ItemGroup>
+        <Resource Include="**\*.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Dirkster.AvalonDock" Version="4.70.3" />
+      <PackageReference Include="Dirkster.AvalonDock.Themes.VS2013" Version="4.70.3" />
+      <PackageReference Include="Ionic.Zlib" Version="1.9.1.5" />
+        <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.8" />
+        <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
+        <PackageReference Include="SharpDX" Version="4.2.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="CTFAK.Core">
+        <HintPath>..\..\..\ClickteamStuff\CTFAK2.0\CTFAK\Interface\CTFAK.Cli\bin\Debug\net6.0-windows\CTFAK.Core.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>

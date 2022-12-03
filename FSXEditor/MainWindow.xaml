@@ -1,0 +1,133 @@
+<!--
+    ************************************************************************
+    AvalonDock
+
+    Copyright (C) 2007-2013 Xceed Software Inc.
+
+    This program is provided to you under the terms of the Microsoft Public
+    License (Ms-PL) as published at https://opensource.org/licenses/MS-PL
+    ************************************************************************
+-->
+
+<Window x:Class="TestApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalonDock="https://github.com/Dirkster99/AvalonDock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TestApp"
+    xmlns:winformsIntegration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:monoGameControls="clr-namespace:MonoGame.WpfCore.MonoGameControls"
+    xmlns:monoGameStuff="clr-namespace:TestApp.MonoGameStuff"
+    Title="MainWindow"
+    Width="1280"
+    Height="720"
+    UseLayoutRounding="True">
+    
+    <Window.DataContext>
+        <monoGameStuff:FrameRendererViewModel />
+    </Window.DataContext>
+    
+    <Grid x:Name="layoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+
+        <DockingManager x:Name="dockManager"
+            Grid.Row="1"
+            AllowMixedOrientation="True"
+            AutoWindowSizeWhenOpened="True"
+            DocumentClosing="DockManager_DocumentClosing"
+            IsVirtualizingAnchorable="True"
+            IsVirtualizingDocument="True">
+            
+            <DockingManager.Theme>
+                <Vs2013LightTheme />
+            </DockingManager.Theme>
+            
+            <DockingManager.DocumentHeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Margin="0,0,4,0" Source="{Binding IconSource}" />
+                        <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+                    </StackPanel>
+                </DataTemplate>
+            </DockingManager.DocumentHeaderTemplate>
+            
+            <LayoutRoot>
+                
+                
+                
+                <LayoutPanel Orientation="Horizontal" x:Name="LayoutLeft">
+                    
+                    <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="200">
+                        <LayoutAnchorablePane DockWidth="200">
+                            <LayoutAnchorable Title="Workspace Toolbar" ContentId="workspaceToolbar">
+                                <TreeView Name="WorkspaceTree"> 
+                                    
+                                    
+                                </TreeView>
+                            </LayoutAnchorable>
+                        </LayoutAnchorablePane>
+                        <LayoutAnchorablePane DockWidth="200">
+                            <LayoutAnchorable Title="Properties" ContentId="propertiesToolbar"></LayoutAnchorable>
+                        </LayoutAnchorablePane>
+                    </LayoutAnchorablePaneGroup>
+                    
+                    <LayoutDocumentPaneGroup>
+                        <LayoutDocumentPane x:Name="LayoutDocumentPane">
+                            
+                            <LayoutDocument
+                                Title="Welcome"
+                                ContentId="welcomeScreen">
+                                
+                               <StackPanel HorizontalAlignment="Center">
+                                   <TextBlock Text="FusionX Editor" FontSize="50"></TextBlock>
+                                   <Button Name="LoadMFA" Click="LoadMFA_OnClick"><TextBlock Text="Load MFA"/></Button>
+                                   <Button Name="SaveMFA" Click="SaveMFA_OnClick"><TextBlock Text="Save MFA"/></Button>
+                               </StackPanel>
+                            </LayoutDocument>
+                            <LayoutDocument
+                                Title="Frame Editor"
+                                ContentId="frameEditorDoc">
+                                <monoGameControls:MonoGameContentControl Grid.Row="0" x:Name="MonoGameControl"/>
+                            </LayoutDocument>
+                            
+                        </LayoutDocumentPane>
+                    </LayoutDocumentPaneGroup>
+                    <LayoutAnchorablePaneGroup DockWidth="50">
+                        <LayoutAnchorablePane>
+                            
+                        </LayoutAnchorablePane>
+                    </LayoutAnchorablePaneGroup>
+                </LayoutPanel>
+
+                <LayoutRoot.RightSide>
+                    <LayoutAnchorSide>
+                        <LayoutAnchorGroup>
+                            <LayoutAnchorable
+                                Title="Layers Toolbar"
+                                ContentId="layersToolbar"
+                                IconSource="/TestApp;component/Images/address-book--pencil.png">
+                            </LayoutAnchorable>
+                        </LayoutAnchorGroup>
+                    </LayoutAnchorSide>
+                </LayoutRoot.RightSide>
+                
+                <LayoutRoot.BottomSide>
+                    <LayoutAnchorSide>
+                        <LayoutAnchorGroup>
+                            <LayoutAnchorable
+                                Title="Library Toolbar"
+                                ContentId="libraryToolbar"
+                                IconSource="/TestApp;component/Images/address-book--pencil.png">
+                            </LayoutAnchorable>
+                        </LayoutAnchorGroup>
+                    </LayoutAnchorSide>
+                </LayoutRoot.BottomSide>
+            </LayoutRoot>
+            
+        </DockingManager>
+    </Grid>
+</Window>

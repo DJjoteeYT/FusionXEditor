@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)monogame.content.builder\3.7.0.8\build\MonoGame.Content.Builder.targets" Condition="Exists('$(NuGetPackageRoot)monogame.content.builder\3.7.0.8\build\MonoGame.Content.Builder.targets')" />
+  </ImportGroup>
+</Project>
