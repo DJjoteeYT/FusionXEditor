@@ -57,6 +57,7 @@ namespace TestApp
 			Core.parameters = "";
 			Settings.isMFA = true;
 			FrameRenderer = DataContext as FrameRendererViewModel;
+			FrameRenderer.parent = this;
 			Editor = new FEditor();
 			MonoGameControl.MouseDown += (s, e) => {
 				if (e.MiddleButton == MouseButtonState.Pressed)
@@ -70,12 +71,18 @@ namespace TestApp
 			MonoGameControl.MouseUp += (s, e) => { IsDraggingFrame = false;};
 			MonoGameControl.MouseMove += (s, e) =>
 			{
+				FrameRenderer.mouse = Mouse.GetPosition(MonoGameControl);
 				if (IsDraggingFrame)
 				{
 					var newMouse = e.GetPosition(MonoGameControl);
 					FrameRenderer.Camera.Position = new Vector2((float)(CameraDragStart.X+(newMouse.X-DragStart.X)/FrameRenderer.Camera.Zoom), (float)(CameraDragStart.Y+(newMouse.Y-DragStart.Y)/FrameRenderer.Camera.Zoom));
 				}
 				
+			};
+			MonoGameControl.MouseLeave += (s,e) =>
+			{
+				IsDraggingFrame = false;
+
 			};
 			MonoGameControl.MouseWheel += (s, e) =>
 			{
