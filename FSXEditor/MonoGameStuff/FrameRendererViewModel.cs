@@ -24,6 +24,7 @@ public class FrameRendererViewModel : MonoGameViewModel
     public Texture2D frameBackgroundTexture;
     public Point mouse;
     public MainWindow parent;
+    public Renderable hoveredObject;
 
     public override void LoadContent()
     {
@@ -35,18 +36,14 @@ public class FrameRendererViewModel : MonoGameViewModel
 
     public override void Update(GameTime gameTime)
     {
-        bool foundHover = false;
         foreach (var renderable in Renderables)
         {
             if (renderable.GetBounds(Camera.GetTransform()).Contains(new Microsoft.Xna.Framework.Point((int)mouse.X, (int)mouse.Y)))
             {
-                foundHover = true;
-                break;
+                hoveredObject = renderable;
             }
         }
-        if(foundHover)
-            Cursor.Current=Cursors.Hand;
-        else Cursor.Current=Cursors.Default;
+        
     }
 
     public override void Draw(GameTime gameTime)
@@ -61,13 +58,8 @@ public class FrameRendererViewModel : MonoGameViewModel
 
         foreach (var renderable in Renderables)
         {
-            _spriteBatch.Draw(renderable.Image, new Vector2(renderable.XPos, renderable.YPos), null, Color.White, 0,
+            _spriteBatch.Draw(renderable.Image, new Vector2(renderable.XPos, renderable.YPos), null, renderable.ObjectColor, 0,
                 new Vector2(renderable.XSpot, renderable.YSpot), new Vector2(1, 1), SpriteEffects.None, 0f);
-            Console.WriteLine(renderable.GetBounds(Camera.GetTransform()));
-            //_spriteBatch.Draw(frameBackgroundTexture, , null, Color.Black);
-
-
-
 
 
 

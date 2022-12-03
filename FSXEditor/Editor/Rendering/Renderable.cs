@@ -15,6 +15,7 @@ public class Renderable
     public float YSpot;
     public Texture2D Image;
     public object Payload;
+    public Color ObjectColor=Color.White;
     
     static Microsoft.Xna.Framework.Point Transform(Microsoft.Xna.Framework.Point point, Matrix matrix)
     {

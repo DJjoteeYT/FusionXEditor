@@ -31,6 +31,7 @@ using Microsoft.Xna.Framework.Graphics;
 using TestApp.Editor;
 using TestApp.Editor.Rendering;
 using TestApp.MonoGameStuff;
+using Color = Microsoft.Xna.Framework.Color;
 using MessageBox = System.Windows.MessageBox;
 using Point = System.Windows.Point;
 
@@ -48,6 +49,11 @@ namespace TestApp
 		public bool IsDraggingFrame;
 		public Point DragStart;
 		public Vector2 CameraDragStart;
+
+		public Renderable selectedObject;
+		public bool IsDraggingObject;
+		public Point ObjectDragStart;
+		public Vector2 ObjectDragStartWorld;
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -66,9 +72,33 @@ namespace TestApp
 					DragStart = Mouse.GetPosition(MonoGameControl);
 					CameraDragStart = FrameRenderer.Camera.Position;
 				}
+
+				if (e.LeftButton == MouseButtonState.Pressed)
+				{
+					foreach (var renderable in FrameRenderer.Renderables)
+					{
+						renderable.ObjectColor = Color.White;
+					}
+
+					
+					if (FrameRenderer.hoveredObject == selectedObject)
+					{
+						IsDraggingObject = true;
+						ObjectDragStart = Mouse.GetPosition(MonoGameControl);
+						ObjectDragStartWorld = new Vector2(selectedObject.XPos,selectedObject.YPos);
+					}
+					else
+					{
+						IsDraggingObject = false;
+						selectedObject = FrameRenderer.hoveredObject;
+						selectedObject.ObjectColor=Color.Silver;
+					}
+				}
 				
 			};
-			MonoGameControl.MouseUp += (s, e) => { IsDraggingFrame = false;};
+			MonoGameControl.MouseUp += (s, e) => { IsDraggingFrame = false;
+				IsDraggingObject = false;
+			};
 			MonoGameControl.MouseMove += (s, e) =>
 			{
 				FrameRenderer.mouse = Mouse.GetPosition(MonoGameControl);
@@ -76,6 +106,15 @@ namespace TestApp
 				{
 					var newMouse = e.GetPosition(MonoGameControl);
 					FrameRenderer.Camera.Position = new Vector2((float)(CameraDragStart.X+(newMouse.X-DragStart.X)/FrameRenderer.Camera.Zoom), (float)(CameraDragStart.Y+(newMouse.Y-DragStart.Y)/FrameRenderer.Camera.Zoom));
+				}
+
+				if (IsDraggingObject)
+				{
+					var newMouse = e.GetPosition(MonoGameControl);
+					var newPos = new Vector2((float)(ObjectDragStartWorld.X+(newMouse.X-ObjectDragStart.X)/FrameRenderer.Camera.Zoom), (float)(ObjectDragStartWorld.Y+(newMouse.Y-ObjectDragStart.Y)/FrameRenderer.Camera.Zoom));
+					selectedObject.XPos = (int)newPos.X;
+					selectedObject.YPos = (int)newPos.Y;
+					
 				}
 				
 			};
